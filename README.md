@@ -16,11 +16,11 @@ SwiftAI comes with a few examples included. These are:
 ### Installation
 For those wishing to try out SwiftAI and the examples stated above, the easiest way is to use Docker. There is a Docker directory with associated DockerFile and installation files. 
 
-**Note: The Docker installation assumes the user has a Kaggle account in order to download the Kaggle data for the Dogs Vs. Cats and Planet examples. If you do not have a Kaggle account or do not want to try these examples, you will need to comment out or remove those commands in the DockerFile.** 
+**Note: The Docker installation assumes the user has a Kaggle account in order to download the Kaggle data for the Dogs Vs. Cats and Planet examples, as well as, to submit results to those Kaggle competitions (see below for submitting to Kaggle). If you do not have a Kaggle account or do not want to try these examples, you will need to comment out or remove those commands in the DockerFile. You may also manually perform these setup steps yourself later inside the Docker container.** 
 
 To install using Docker perform the following steps after downloading this repository. 
 
- 1. Edit the kaggle.json file to specify your Kaggle username and Kaggle key. If you do not want to use Kaggle or do not have a Kaggle account, then comment out or remove the Kaggle Section of the DockerFile. 
+ 1. **(Optional - See Note above.)** Edit the kaggle.json file to specify your Kaggle username and Kaggle key. If you do not want to use Kaggle or do not have a Kaggle account, then comment out or remove the Kaggle Section of the DockerFile.
 
  2. From the command line within the Docker directory, execute the following Docker command:
 	
@@ -33,7 +33,9 @@ To install using Docker perform the following steps after downloading this repos
 4. You should be in the /home/SwiftAI directory. Build SwiftAI using the following command:
 
      	swift build
-     	
+     
+ 5. **WARNING: After you are finished with the installation, make sure to delete your username and key from the kaggle.json installation file. Also, do NOT share your image or containers with anyone as it now has your Kaggle credentials. Once you are done with the Docker image and/or containers, make sure to delete accordingly.**
+ 
 ### Running the Examples
 For all examples, the currently training model's weights will be saved after each epoch in a .pth file. To begin training a model from scratch, delete its associated .pth file before training. These files are saved in the current working directory.
 
@@ -64,7 +66,7 @@ Where:
  - **example** is the example to run and is mnist, cifar10, dogscats, planet or pascal
  - **valid** is the literal word 'valid'. If specified, the test is performed on the validation set, not the test set. For MNIST, this is the only option.
 
-Below is an example of the output seen after testing. This is an example of testing using the Pascal VOC 2007 example. The output is ordered by IoU in descending order.
+Below is an example of the output seen after testing. This is an example of testing using the Pascal VOC 2007 example. The output is ordered by IoU (Intersection over Union) in descending order.
 ![Image](./images/pascalvoc2007test.png "Testing Output")
 
 **Submitting to Kaggle**
