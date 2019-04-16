@@ -16,11 +16,13 @@ SwiftAI comes with a few examples included. These are:
 ## Installation
 For those wishing to try out SwiftAI and the examples stated above, the easiest way is to use Docker. There is a Docker directory with associated DockerFile and installation files. 
 
-**Note: The Docker installation assumes the user has a Kaggle account in order to download the Kaggle data for the Dogs Vs. Cats and Planet examples, as well as, to submit results to those Kaggle competitions (see below for submitting to Kaggle). If you do not have a Kaggle account or do not want to try these examples, you will need to comment out or remove those commands in the DockerFile. You may also manually perform these setup steps yourself later inside the Docker container. ** 
+**Note: The Docker installation assumes the user has a Kaggle account in order to download the Kaggle data for the Dogs Vs. Cats and Planet examples, as well as, to submit results to those Kaggle competitions (see below for submitting to Kaggle). If you do not have a Kaggle account or do not want to try these examples, you will need to comment out or remove those commands in the DockerFile. You may also manually perform these setup steps yourself later inside the Docker container.**
+
+**Another Note: Make sure you have a fast Internet connection before starting the installation as the example data takes a while to download. Optionally, you may modify the DockerFile to comment out examples that you aren't interested in. You may optionally then download them at a later date if so desired.**
 
 To install using Docker perform the following steps after downloading this repository. 
 
- 1. **(Optional - See Note above.)** Edit the kaggle.json file to specify your Kaggle username and Kaggle key. If you do not want to use Kaggle or do not have a Kaggle account, then comment out or remove the Kaggle Section of the DockerFile.
+ 1. **(See Note above.)** Edit the kaggle.json file to specify your Kaggle username and Kaggle key. If you do not want to use Kaggle or do not have a Kaggle account, then comment out or remove the Kaggle Section of the DockerFile.
 
  2. From the command line within the Docker directory, execute the following Docker command:
 	
@@ -79,3 +81,4 @@ To submit to the Dogs vs. Cats Redux: Kernels Edition competition, execute the f
 To submit to the Planet: Understanding the Amazon from Space, execute the following command:
 
 	kaggle competitions submit -c planet-understanding-the-amazon-from-space -f planet-kaggle-submission.csv -m "Message"
+
