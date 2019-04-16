@@ -1,0 +1,61 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Socket",
+        "repositoryURL": "https://github.com/IBM-Swift/BlueSocket.git",
+        "state": {
+          "branch": null,
+          "revision": "ccc671b022bc60e5fffcb2aa15f499c6331bfd18",
+          "version": "1.0.46"
+        }
+      },
+      {
+        "package": "CommandLineKit",
+        "repositoryURL": "https://github.com/pvieito/CommandLineKit.git",
+        "state": {
+          "branch": "master",
+          "revision": "0987ddc20ac1c6d6ae90daf538d626b977ab1d7a",
+          "version": null
+        }
+      },
+      {
+        "package": "CSV.swift",
+        "repositoryURL": "https://github.com/yaslab/CSV.swift.git",
+        "state": {
+          "branch": "master",
+          "revision": "c88aca78506069da753e7b3a68ee532341a9b368",
+          "version": null
+        }
+      },
+      {
+        "package": "SwiftRedis",
+        "repositoryURL": "https://github.com/IBM-Swift/Kitura-redis.git",
+        "state": {
+          "branch": null,
+          "revision": "c9d45f6f0bf4bf627942fdbf6316b91af91610a2",
+          "version": "2.1.1"
+        }
+      },
+      {
+        "package": "LoggerKit",
+        "repositoryURL": "https://github.com/pvieito/LoggerKit.git",
+        "state": {
+          "branch": "master",
+          "revision": "211004a6607ab7cbd34e3a0176b544147904bbc4",
+          "version": null
+        }
+      },
+      {
+        "package": "PythonTool",
+        "repositoryURL": "https://github.com/pvieito/PythonKit.git",
+        "state": {
+          "branch": "master",
+          "revision": "d9dddb1ec99f1eaef914ba3908faef3d6185b041",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
