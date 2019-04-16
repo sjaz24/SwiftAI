@@ -30,6 +30,11 @@ public class Planet : MultiClassICVP {
             .withY(["primary", "clear", "agriculture", "road", "water"], type: .Test)
     }
 
+    override open func getTransforms() -> Transforms<URL,[String],PythonObject,PythonObject> {
+        return super.getTransforms()
+            .append(Flip(type: .Vertical))
+    }
+
     override public func getTestCallback() -> TestCallback<URL,[String]> {
         return PlanetKaggleCallback(classes: classes, threshold: threshold, testResultsFilePath: testResultsFilePath)
     }
