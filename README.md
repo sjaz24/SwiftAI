@@ -4,7 +4,7 @@ SwiftAI is a personal project of mine for learning more about deep learning and 
 
 #### Current Version: 0.0.0.1
 
-### Examples
+## Examples
 SwiftAI comes with a few examples included. These are:
 
  - MNIST
@@ -13,10 +13,10 @@ SwiftAI comes with a few examples included. These are:
  - Planet: Understanding the Amazon from Space
  - Pascal VOC 2007
 
-### Installation
+## Installation
 For those wishing to try out SwiftAI and the examples stated above, the easiest way is to use Docker. There is a Docker directory with associated DockerFile and installation files. 
 
-**Note: The Docker installation assumes the user has a Kaggle account in order to download the Kaggle data for the Dogs Vs. Cats and Planet examples, as well as, to submit results to those Kaggle competitions (see below for submitting to Kaggle). If you do not have a Kaggle account or do not want to try these examples, you will need to comment out or remove those commands in the DockerFile. You may also manually perform these setup steps yourself later inside the Docker container.** 
+**Note: The Docker installation assumes the user has a Kaggle account in order to download the Kaggle data for the Dogs Vs. Cats and Planet examples, as well as, to submit results to those Kaggle competitions (see below for submitting to Kaggle). If you do not have a Kaggle account or do not want to try these examples, you will need to comment out or remove those commands in the DockerFile. You may also manually perform these setup steps yourself later inside the Docker container. ** 
 
 To install using Docker perform the following steps after downloading this repository. 
 
@@ -36,25 +36,25 @@ To install using Docker perform the following steps after downloading this repos
      
  5. **WARNING: After you are finished with the installation, make sure to delete your username and key from the kaggle.json installation file. Also, do NOT share your image or containers with anyone as it now has your Kaggle credentials. Once you are done with the Docker image and/or containers, make sure to delete accordingly.**
  
-### Running the Examples
+## Running the Examples
 For all examples, the currently training model's weights will be saved after each epoch in a .pth file. To begin training a model from scratch, delete its associated .pth file before training. These files are saved in the current working directory.
 
-**Training**
+### Training
 To begin training a model for one of the examples, execute the following:
 
     swift run SwiftAI [example] train [num. epochs] [learning rate] [batch size]
 
 Where:
 
- - **example** is the example to run and is mnist, cifar10, dogscats, planet or pascal
- - **num. epochs** is the number of epochs to train. If not specified, then defaults to 1.
+ - **example** is the example to run and is **mnist**, **cifar10**, **dogscats**, **planet** or **pascal**
+ - **num. epochs** is the number of epochs to train. Defaults to 1 if not specified.
  - **learning rate** is the learning rate. Defaults to 0.1 if not specified. **num. epochs** must be specified, if this is specified.
  - **batch size** - the batch size. Defaults to 32 if not specified. Both **num. epochs** and **learning rate** must be specified if this is specified.
 
 Below is an example of the output seen during training. This is an example of training using the Dogs Vs. Cats example.
 ![Image](./images/dogsvscatstraining.png "Training Output")
 
-**Testing**
+### Testing
  All the examples except MNIST contain a test set. However, for MNIST you may test against the validation data set which you can do for any of the examples as well.
 
 To predict on the test set for a given example, execute the following:
@@ -66,7 +66,7 @@ Where:
  - **example** is the example to run and is mnist, cifar10, dogscats, planet or pascal
  - **valid** is the literal word 'valid'. If specified, the test is performed on the validation set, not the test set. For MNIST, this is the only option.
 
-Below is an example of the output seen after testing. This is an example of testing using the Pascal VOC 2007 example. The output is ordered by IoU (Intersection over Union) in descending order.
+Below is an example of the output seen after testing. This is an example of testing using the Pascal VOC 2007 example. The output is ordered by IoU in descending order.
 ![Image](./images/pascalvoc2007test.png "Testing Output")
 
 **Submitting to Kaggle**
@@ -79,4 +79,3 @@ To submit to the Dogs vs. Cats Redux: Kernels Edition competition, execute the f
 To submit to the Planet: Understanding the Amazon from Space, execute the following command:
 
 	kaggle competitions submit -c planet-understanding-the-amazon-from-space -f planet-kaggle-submission.csv -m "Message"
-
