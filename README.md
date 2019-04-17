@@ -22,7 +22,7 @@ For those wishing to try out SwiftAI and the examples stated above, the easiest 
 
 To install using Docker perform the following steps after downloading this repository. 
 
- 1. **(See Note above.)** Edit the kaggle.json file to specify your Kaggle username and Kaggle key. If you do not want to use Kaggle or do not have a Kaggle account, then comment out or remove the Kaggle Section of the DockerFile.
+ 1. **(See Note Above)** Edit the kaggle.json file to specify your Kaggle username and Kaggle key. If you do not want to use Kaggle or do not have a Kaggle account, then comment out or remove the Kaggle Section of the DockerFile.
 
  2. From the command line within the Docker directory, execute the following Docker command:
 	
@@ -57,7 +57,7 @@ Below is an example of the output seen during training. This is an example of tr
 ![Image](./images/dogsvscatstraining.png "Training Output")
 
 ### Testing
- All the examples except MNIST contain a test set. However, for MNIST you may test against the validation data set which you can do for any of the examples as well.
+ All the examples except MNIST contain a test set. However, for MNIST you may test against the validation set, which you can also do for any of the examples as well.
 
 To predict on the test set for a given example, execute the following:
 
@@ -65,13 +65,14 @@ To predict on the test set for a given example, execute the following:
 
 Where:
 
- - **example** is the example to run and is mnist, cifar10, dogscats, planet or pascal
- - **valid** is the literal word 'valid'. If specified, the test is performed on the validation set, not the test set. For MNIST, this is the only option.
+ - **example** is the example to run and is **mnist**, **cifar10**, **dogscats**, **planet** or **pascal**
+ - **valid** is the literal word 'valid'. If specified, the test is performed on the validation set, not the test set. For MNIST, this must be specified.
 
-Below is an example of the output seen after testing. This is an example of testing using the Pascal VOC 2007 example. The output is ordered by IoU in descending order.
+Below is an example of the output seen after testing. This is an example of testing using the Pascal VOC 2007 example. The output is ordered by IoU (Intersection over Untion) in descending order.
+  
 ![Image](./images/pascalvoc2007test.png "Testing Output")
 
-**Submitting to Kaggle**
+### Submitting to Kaggle
 If you configured your kaggle.json during installation with your Kaggle username and key, you can submit your test results to Kaggle for The Dogs Vs. Cats and the Planet examples. At the end of a test execution for either of these examples, a file that can be submitted to Kaggle is created in addition to the output displayed on screen. 
 
 To submit to the Dogs vs. Cats Redux: Kernels Edition competition, execute the following command:
