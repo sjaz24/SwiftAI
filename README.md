@@ -1,6 +1,6 @@
 # SwiftAI
 
-SwiftAI is a personal project of mine for learning more about deep learning and neural networks as I work my way through the [Fast.ai](https://www.fast.ai/) courses and learn more about the [Fast.ai](https://github.com/fastai/fastai) library. Since I am writing it in Swift it also allows me to practice my Swift programming skills. In addition to the Swift programming language, SwiftAI uses Python and Pytorch. SwiftAI is shared here for other FastAI students for learning purposes. SwiftAI is a work in progress and is in its earliest stages and will change frequently and is not intended for any other purpose than learning and many things may be wrong or incorrect. Currently, only CPU (not GPU) is supported.
+SwiftAI is a personal project of mine for learning more about deep learning and neural networks as I work my way through the [Fast.ai](https://www.fast.ai/) courses and learn more about the [Fast.ai](https://github.com/fastai/fastai) library. Since I am writing it in Swift it also allows me to practice my Swift programming skills. In addition to the Swift programming language, SwiftAI uses Python and Pytorch. SwiftAI is shared here for other FastAI students for learning purposes. SwiftAI is a work in progress and is in its earliest stages and will change frequently and is not intended for any purpose other than learning/educational. Note: Many things may be wrong and/or incorrect. Currently, only CPU (not GPU) is supported.
 
 #### Current Version: 0.0.0.1
 
